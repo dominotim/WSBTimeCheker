@@ -13,16 +13,16 @@ namespace tcUserInfo
 class UserInfo
 {
 public:
-	UserInfo(
-		const std::wstring& name,
-		const std::wstring& applycationName,
-		const std::wstring& url,
-		std::time_t time);
-	std::wstring ToString() const;
+    UserInfo(
+        const std::wstring& name,
+        const std::wstring& applycationName,
+        const std::wstring& url,
+        std::time_t time);
+    std::wstring ToString() const;
 private:
-	std::wstring m_name;
-	std::wstring m_applycationName;
-	std::wstring m_url;
-	std::time_t m_time;
+    std::wstring m_name;
+    std::wstring m_applycationName;
+    std::wstring m_url;
+    std::time_t m_time;
 };
 }  // tcUserInfo
