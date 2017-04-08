@@ -16,6 +16,12 @@
     <Filter Include="Asio">
       <UniqueIdentifier>{f00ac5a9-5ab3-4cd7-ae17-67f1a4da061b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{b7679eca-e1b7-4cc3-abe6-182f0c2a16c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes">
+      <UniqueIdentifier>{583decde-139e-4bff-bbbd-3c558d6bf4fd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -30,6 +36,15 @@
     <ClInclude Include="..\..\asio-1.10.8\include\asio.hpp">
       <Filter>Asio</Filter>
     </ClInclude>
+    <ClInclude Include="include\tcCurrentWindowInfoGetter.hpp">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcNetworkUtils.hpp">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tcUserInfo.hpp">
+      <Filter>includes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -37,6 +52,12 @@
     </ClCompile>
     <ClCompile Include="TimeCheckerAgent.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tcCurrentWindowInfoGetter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tcUserInfo.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
