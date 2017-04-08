@@ -10,7 +10,6 @@ std::wstring GetData(const std::time_t time);
 
 namespace tcUserInfo
 {
-
 class UserInfo
 {
 public:
@@ -26,5 +25,4 @@ private:
 	std::wstring m_url;
 	std::time_t m_time;
 };
-
 }  // tcUserInfo

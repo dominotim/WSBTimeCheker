@@ -5,7 +5,6 @@
 
 namespace tcUserInfoHelper
 {
-
 std::wstring GetTime(const std::time_t time)
 {
 	char buffer[80];
@@ -23,7 +22,6 @@ std::wstring GetData(const std::time_t time)
 	std::string tmp(buffer);
 	return std::wstring(tmp.begin(), tmp.end());
 }
-
 }  // tcUserInfoHelper
 
 namespace tcUserInfo
@@ -48,5 +46,4 @@ std::wstring UserInfo::ToString() const
 	result += std::wstring(L"Time=") + tcUserInfoHelper::GetTime(this->m_time);
 	return result;
 }
-
 }  // tcUserInfo

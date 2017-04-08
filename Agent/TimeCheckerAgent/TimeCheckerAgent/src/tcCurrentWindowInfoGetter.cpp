@@ -12,7 +12,6 @@
 
 namespace
 {
-
 std::wstring GetName(IAccessible *pAcc)
 {
 	CComBSTR bstrName;
@@ -56,7 +55,6 @@ HRESULT WalkTreeWithAccessibleChildren(CComPtr<IAccessible> pAcc, std::wstring& 
 	delete[] pArray;
 	return S_OK;
 }
-
 }  // namespace
 
 namespace tcCurrentWindowInfoGetter
@@ -120,4 +118,4 @@ std::wstring GetNormalizedCurrentApplicationName(HWND windowHendler)
 		return res.substr(last + 1, res.size());
 	return res;
 }
-}
+}  // tcCurrentWindowInfoGetter

@@ -10,18 +10,18 @@ namespace tcNetworkUtils
 {
 namespace
 {
-	struct toStringDetector
-	{
-		static auto check(void*) ->std::wstring;
-		template<class T>
-		static auto check(T* objPtr) -> decltype(objPtr->ToString())*;
-		typedef std::wstring* match_type;
-	};
-	template<class T> struct hasToString
-		: std::is_same<toStringDetector::match_type,
-						decltype(toStringDetector::check(static_cast<T*>(nullptr)))> 
-	{
-	};
+struct toStringDetector
+{
+	static auto check(void*) ->std::wstring;
+	template<class T>
+	static auto check(T* objPtr) -> decltype(objPtr->ToString())*;
+	typedef std::wstring* match_type;
+};
+template<class T> struct hasToString
+	: std::is_same<toStringDetector::match_type,
+					decltype(toStringDetector::check(static_cast<T*>(nullptr)))> 
+{
+};
 }  // namespace
 
 template <typename ObjectType>
@@ -51,6 +51,5 @@ std::string SendPOST(
 	stream.close();
 	return oss.str();
 }
-
 } //  tcNetworkUtils
 
